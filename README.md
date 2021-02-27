@@ -44,3 +44,6 @@ development:
   username: postgres
   password: postgres
 ```
+
+You can autostart your container whenever your OS boots up, running this command:
+`docker start sharedpg`

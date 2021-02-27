@@ -1,6 +1,7 @@
 version: '3.2'
 services:
   sharedpg:
+    container_name: sharedpg
     image: postgres:latest
     restart: always
     ports:
