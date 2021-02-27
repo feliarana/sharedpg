@@ -1,0 +1,19 @@
+version: '3.2'
+services:
+  sharedpg:
+    image: postgres:latest
+    restart: always
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+    ports:
+      - 5433:5432
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+#     networks:
+#     - shared
+# networks:
+#   shared:
+#     external:
+#       name: shared
