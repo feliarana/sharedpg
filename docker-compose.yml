@@ -3,6 +3,8 @@ services:
   sharedpg:
     container_name: sharedpg
     image: postgres:latest
+    volumes:
+      - ./sharedpg:/var/lib/postgresql/data
     restart: always
     ports:
       - 5433:5432
@@ -12,6 +14,9 @@ services:
       - POSTGRES_PASSWORD=postgres
     networks:
     - shared
+volumes:
+  sharedpg:
+    name: sharedpg
 networks:
   shared:
     name: shared
