@@ -7,8 +7,15 @@ Requirements:
 
 Steps:
 
-1) Configure port, network, user and password as you wish. Default port is 5433.
-2) `docker-compose up -d`.
+1) Configure port, network, user and password as you wish. Default port is 5433:
+Create a network. For example, we are craeting the network named "shared" using the bridge driver: 
+`docker network create --driver bridge shared`
+
+For more information:
+https://docs.docker.com/network/bridge/
+
+
+2) `docker-compose up -d`
 3) If you're having trouble with yarn packages, DON'T run yarn install on your local machine and do it in the docker container.
 
 By using the default docker-compose.yml of this proyect, your containers will connect to the 5432 port using the shared network.
