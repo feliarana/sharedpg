@@ -21,3 +21,6 @@ networks:
   shared:
     name: shared
     driver: bridge
+    ipam:
+     config:
+       - subnet: 173.18.0.0/24
